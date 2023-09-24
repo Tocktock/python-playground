@@ -1,0 +1,8 @@
+jupyter
+tensorflow
+numpy
+pandas
+matplot
+notebook
+tensorflow_decision_forests
+seaborn
