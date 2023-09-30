@@ -1,6 +1,12 @@
-from webScrapper.Extractor import Extractor
+from time import sleep
 
-extractor = Extractor()
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
-result = extractor.extract_wwr_jobs("python")
-print(result)
+options = Options()
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
+
+browser = webdriver.Chrome(options=options)
+browser.get("https://www.indeed.com/jobs?q=python&l=Remote&start=10")
+
